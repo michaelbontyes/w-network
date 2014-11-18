@@ -1,0 +1,33 @@
+---
+vagrantfile-local:
+    vm:
+        box: trusty64
+        box_url: http://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
+        hostname: 'w'
+        memory: '2048'
+        cpus: '1'
+        chosen_provider: virtualbox
+        network:
+            private_network: 192.168.88.88
+            forwarded_port:
+                CNLMNgtcBCbD:
+                    host: '7300'
+                    guest: '22'
+        pre_up_message: '### Vagrant WP provisionning has started ###'  
+        post_up_message: '### Installation of the Vagrant WP Completed ! ###'
+        provider:
+            virtualbox:
+                modifyvm:
+                    natdnshostresolver1: on
+            vmware:
+                numvcpus: 1
+            parallels:
+                cpus: 1
+        provision:
+            puppet:
+                manifests_path: puppet/manifests
+                manifest_file: init.pp
+                module_path: puppet/modules
+        usable_port_range:
+            start: 10200
+            stop: 10500

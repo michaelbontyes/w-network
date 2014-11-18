@@ -1,0 +1,11 @@
+.vagrant/
+latest.tar.gz
+node_modules
+wordpress/wp-content/uploads/
+/wordpress/wp-content/plugins
+/wordpress/wp-config.development.php
+/wordpress/wp-config.env.php
+/wordpress/wp-config.php
+/wordpress/wp-config.production.php
+/wordpress/wp-config-sample.php
+/wordpress/wp-config.default.php
