@@ -9,3 +9,4 @@ wordpress/wp-content/uploads/
 /wordpress/wp-config.production.php
 /wordpress/wp-config-sample.php
 /wordpress/wp-config.default.php
+/wordpress/wp-content/uploads
